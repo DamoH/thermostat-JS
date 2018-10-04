@@ -1,5 +1,5 @@
 function Thermostat() {
-  this.currentTemp = undefined;
+  this.currentTemp = 20;
   this.startTemp = 20;
   this.minTemp = 10;
   this.button = "on";
@@ -30,6 +30,16 @@ Thermostat.prototype.powerSave = function(button) {
 };
 
 Thermostat.prototype.reset = function() {
-  this.temp = 20;
-  return this.temp;
+  this.currentTemp = 20;
+  return this.currentTemp;
+};
+
+Thermostat.prototype.usage = function(currentTemp) {
+  if (currentTemp < 18) {
+    return "low-usage";
+  } else if (currentTemp > 25) {
+    return "high-usage";
+  } else {
+    return "medium-usage";
+  }
 };

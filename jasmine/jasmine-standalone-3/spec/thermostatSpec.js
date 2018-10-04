@@ -48,4 +48,18 @@ describe("Thermostat", function () {
     });
   });
 
+  describe("#usage", function() {
+    it("it should report back with low energy usage", function() {
+      expect(thermostat.usage(17)).toEqual("low-usage");
+    });
+
+    it("it should report back with medium energy usage", function() {
+      expect(thermostat.usage(22)).toEqual("medium-usage");
+    });
+
+    it("it should report back with low energy usage", function() {
+      expect(thermostat.usage(26)).toEqual("high-usage");
+    });
+  });
+
 });

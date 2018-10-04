@@ -1,7 +1,7 @@
 function Thermostat() {
   this.startTemp = 20;
   this.minTemp = 10;
-  // this.maxTemp = 32;
+  this.button = "on";
 };
 
 Thermostat.prototype.starter = function() {

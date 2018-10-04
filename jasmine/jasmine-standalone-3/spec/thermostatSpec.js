@@ -1,5 +1,6 @@
 describe("Thermostat", function () {
   var thermostat;
+  var button;
 
   beforeEach(function() {
     thermostat = new Thermostat();
@@ -35,6 +36,9 @@ describe("Thermostat", function () {
     });
     it("should have a max temp of 32 degs when powersave mode is off", function() {
       expect(thermostat.powerSave("off")).toEqual(thermostat.powerSave(32));
+    });
+    it("should have the power save mode on by default", function() {
+      expect(thermostat.powerSave(button)).toEqual(thermostat.powerSave("on"));
     });
   });
 

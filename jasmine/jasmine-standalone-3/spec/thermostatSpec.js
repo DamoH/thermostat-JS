@@ -42,4 +42,10 @@ describe("Thermostat", function () {
     });
   });
 
+  describe("#reset", function() {
+    it("should reset the temp to 20 with a reset function", function() {
+      expect(thermostat.reset()).toEqual(20);
+    });
+  });
+
 });

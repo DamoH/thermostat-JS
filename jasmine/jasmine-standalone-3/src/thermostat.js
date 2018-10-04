@@ -1,4 +1,5 @@
 function Thermostat() {
+  this.currentTemp = undefined;
   this.startTemp = 20;
   this.minTemp = 10;
   this.button = "on";
@@ -26,4 +27,9 @@ Thermostat.prototype.powerSave = function(button) {
   } else {
     var maxTemp = 32;
   }
+};
+
+Thermostat.prototype.reset = function() {
+  this.temp = 20;
+  return this.temp;
 };

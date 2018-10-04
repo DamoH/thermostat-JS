@@ -9,3 +9,7 @@ Thermostat.prototype.starter = function() {
 Thermostat.prototype.upTemp = function(num) {
   return (this.startTemp + num);
 };
+
+Thermostat.prototype.downTemp = function(num) {
+  return (this.startTemp - num);
+};

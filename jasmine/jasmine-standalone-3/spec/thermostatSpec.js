@@ -17,6 +17,10 @@ describe("Thermostat", function () {
     });
   });
 
-
+  describe("#downTemp", function() {
+    it("should decrease the temp with a down function", function() {
+      expect(thermostat.downTemp(10)).toEqual(10);
+    });
+  });
 
 });

@@ -32,13 +32,14 @@ describe("Thermostat", function () {
 
   describe("#powerSave", function() {
     it("should have a max temp of 25 degs when powersave mode is on", function() {
-      expect(thermostat.powerSave("on")).toEqual(thermostat.powerSave(25));
+      expect(thermostat.powerSave("on")).toEqual(25);
     });
     it("should have a max temp of 32 degs when powersave mode is off", function() {
-      expect(thermostat.powerSave("off")).toEqual(thermostat.powerSave(32));
+      expect(thermostat.powerSave("off")).toEqual(32);
     });
+    console.log(button);
     it("should have the power save mode on by default", function() {
-      expect(thermostat.powerSave(button)).toEqual(thermostat.powerSave("on"));
+      expect(thermostat.powerSave(this.button)).toEqual("on");
     });
   });
 

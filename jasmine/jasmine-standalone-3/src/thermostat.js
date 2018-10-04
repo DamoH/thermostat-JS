@@ -24,8 +24,13 @@ Thermostat.prototype.minimum = function() {
 Thermostat.prototype.powerSave = function(button) {
   if (button === "on") {
     var maxTemp = 25;
-  } else {
+    return maxTemp;
+  } else if (button === "off") {
     var maxTemp = 32;
+    return maxTemp;
+  } else {
+    this.button === "on";
+    return this.button;
   }
 };
 

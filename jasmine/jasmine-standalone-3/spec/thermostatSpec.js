@@ -33,6 +33,9 @@ describe("Thermostat", function () {
     it("should have a max temp of 25 degs when powersave mode is on", function() {
       expect(thermostat.powerSave("on")).toEqual(thermostat.powerSave(25));
     });
+    it("should have a max temp of 32 degs when powersave mode is off", function() {
+      expect(thermostat.powerSave("off")).toEqual(thermostat.powerSave(32));
+    });
   });
 
 });

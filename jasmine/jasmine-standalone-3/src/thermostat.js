@@ -1,6 +1,7 @@
 function Thermostat() {
   this.startTemp = 20;
   this.minTemp = 10;
+  // this.maxTemp = 32;
 };
 
 Thermostat.prototype.starter = function() {
@@ -17,4 +18,12 @@ Thermostat.prototype.downTemp = function(num) {
 
 Thermostat.prototype.minimum = function() {
   return this.minTemp;
+};
+
+Thermostat.prototype.powerSave = function(button) {
+  if (button === "on") {
+    var maxTemp = 25;
+  } else {
+    var maxTemp = 32;
+  }
 };

@@ -29,4 +29,10 @@ describe("Thermostat", function () {
     });
   });
 
+  describe("#powerSave", function() {
+    it("should have a max temp of 25 degs when powersave mode is on", function() {
+      expect(thermostat.powerSave("on")).toEqual(thermostat.powerSave(25));
+    });
+  });
+
 });
